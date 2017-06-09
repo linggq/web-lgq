@@ -1,0 +1,106 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312" />
+<title>DIV CSS布局实例：CSS标签切换代码</title>
+<style type="text/css"> 
+* {list-style-type:none; font-size:12px; text-decoration:none; margin:0; padding:0;}
+a {behavior:url(xuxian.htc)}
+.woaicss {width:438px; height:300px; overflow:hidden; margin:50px auto;}
+.woaicss_title {width:438px; height:30px; background:#fff url(images/btn_bg.png) no-repeat; overflow:hidden;}
+.woaicss_title li {display:block; float:left; margin:0 2px 0 0; display:inline; text-align:center;}
+.woaicss_title li a {display:block; width:90px; heigth:30px; line-height:34px; color:#fff;}
+.woaicss_title li a:hover {color:#f0f0f0; text-decoration:underline;}
+.woaicss_title_bg1 {background-position:0 0;}
+.woaicss_title_bg2 {background-position:0 -30px;}
+.woaicss_title_bg3 {background-position:0 -60px;}
+.woaicss_title_bg4 {background-position:0 -90px;}
+.woaicss_con {display:block; width:438px; height:270px; background:url(images/con_bg.png) no-repeat 0 0; overflow:hidden;}
+.woaicss_con ul {width:418px; height:250px; margin:12px auto;}
+.woaicss_con li {width:418px; line-height:30px; margin:0 auto; white-space:nowrap; text-overflow:ellipsis; overflow: hidden;}
+.woaicss_con li a {color:#03c;}
+.woaicss_con li a:hover {color:#069; text-decoration:underline;}
+.woaicss_copy {width:438px; margin:10px auto; text-align:center;}
+.woaicss_copy a {color:#f00;}
+</style>
+</head>
+<body>
+<div class="woaicss">
+<script language="javascript"> 
+ function woaicssq(num){
+ for(var id = 1;id<=4;id++)
+ {
+ var MrJin="woaicss_con"+id;
+ if(id==num)
+ document.getElementById(MrJin).style.display="block";
+ else
+ document.getElementById(MrJin).style.display="none";
+ }
+ if(num==1) 
+ document.getElementById("woaicsstitle").className="woaicss_title woaicss_title_bg1";
+ if(num==2)
+ document.getElementById("woaicsstitle").className="woaicss_title woaicss_title_bg2";
+ if(num==3)
+ document.getElementById("woaicsstitle").className="woaicss_title woaicss_title_bg3";
+ if(num==4)
+ document.getElementById("woaicsstitle").className="woaicss_title woaicss_title_bg4";
+ }
+</script>
+ <ul class="woaicss_title woaicss_title_bg1" id="woaicsstitle">
+  <li><a href="#" target="_blank" onmouseover="javascript:woaicssq(1)">ExtJS</a></li>
+  <li><a href="#" target="_blank" onmouseover="javascript:woaicssq(2)">Div教程</a></li>
+  <li><a href="#" target="_blank" onmouseover="javascript:woaicssq(3)">CSS布局实例</a></li>
+  <li><a href="#" target="_blank" onmouseover="javascript:woaicssq(4)">WEB标准化</a></li>
+ </ul>
+ <div class="woaicss_con" id="woaicss_con1" style="display:block;">
+   <ul>
+    <li>·<a href="#" title="">Web Developer插件教程 CSS网页布局辅助设计利器！详细图文讲解！</a></li>
+    <li>·<a href="#" title="">CSS Templates 频道4月5日更新 增加模板22套</a></li>
+    <li>·<a href="#" title="">XHTML与CSS入门经典 从零开始系列教程！</a></li>
+    <li>·<a href="#" title="">DIV+CSS布局入门示例（目录）</a></li>
+    <li>·<a href="#" title="">CSS基础教程17篇 [翻译Htmldog]</a></li>
+    <li>·<a href="#" title="">DIV CSS布局实例：用css网站布局之十步实录！（目录） </a></li>
+    <li>·<a href="#" title="">WEB2.0标准教程 循序渐进十二天的基础学习！</a></li>
+    <li>·<a href="#" title="">Div+CSS 网页布局 教程！</a></li>
+   </ul>
+ </div>
+ <div class="woaicss_con" id="woaicss_con2" style="display:none;">
+   <ul>
+    <li>·<a href="#" title="">DIV+CSS的XHTML代码结构浅谈 - 不要真DIV+CSS了</a></li>
+    <li>·<a href="#" title="">Div CSS教程：letter-spacing与word-spacing属性详解</a></li>
+    <li>·<a href="#" title="">margin外边距属性在inline内联元素中应用的测试！</a></li>
+    <li>·<a href="#" title="">Div CSS教程：block element与inline element元素详解 </a></li>
+    <li>·<a href="#" title="">DIV CSS实例教程：一款清新风格的CSS新闻列表制作</a></li>
+    <li>·<a href="#" title="">DIV CSS布局中如何组织样式表以便于简化、维护</a></li>
+    <li>·<a href="#" title="">DIV CSS编码中容易犯的一些错误 DIV CSS编码中容易犯的一些错误</a></li>
+    <li>·<a href="#" title="">如何将XHTML+CSS页面转换为打印机页面</a></li>
+   </ul>
+ </div>
+ <div class="woaicss_con" id="woaicss_con3" style="display:none;">
+   <ul>
+    <li>·<a href="#" title="">IE6、IE7绝对定位与链接 问题研究</a></li>
+    <li>·<a href="#" title="">CSS实例：无懈可击的CSS圆角技术！</a></li>
+    <li>·<a href="#" title="">CSS布局教程：DIV+CSS三列式布局的实现方法</a></li>
+    <li>·<a href="#" title="">CSS基础实例：CSS实现带背景图片的文字链接的方法</a></li>
+    <li>·<a href="#" title="">Div+CSS实例：如何用CSS实现背景半透明效果</a></li>
+    <li>·<a href="#" title="">CSS实例：list-style-type在IE与FF中奇怪的现象解析</a></li>
+    <li>·<a href="#" title="">Div CSS布局关于分辨率与100%自适应问题的探讨！</a></li>
+    <li>·<a href="#" title="">CSS实例：如何让无空格的长字符在IE和FF下面实现自动换行？</a></li>
+   </ul>
+ </div>
+ <div class="woaicss_con" id="woaicss_con4" style="display:none;">
+   <ul>
+    <li>·<a href="#" title="">CSS实用案例集(第2版) － CSS Cookbook</a></li>
+    <li>·<a href="#" title="">CSS禅意花园 读后感</a></li>
+    <li>·<a href="#" title="">CSS实战手册 公开发行 强烈推荐！2007年第17届Jolt 生产效率大奖</a></li>
+    <li>·<a href="#" title="">CSSer：你该如何发展，如何学习进步？</a></li>
+    <li>·<a href="#" title="">The ultimate webdesign usability checklist</a></li>
+    <li>·<a href="#" title="">Adobe Dreamweaver CS3 新功能简介</a></li>
+    <li>·<a href="#" title="">Web Standards与Web2.0应有所区别！</a></li>
+    <li>·<a href="#" title="">CSS教程：是什么使得CSS改善了WEB网站的可访问性</a></li>
+   </ul>
+ </div>
+</div>
+</body>
+</html>
